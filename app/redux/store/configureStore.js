@@ -1,14 +1,23 @@
+import { AsyncStorage } from 'react-native'
 import { createStore, applyMiddleware } from 'redux'
 import { persistStore, autoRehydrate } from 'redux-persist'
 import thunk from 'redux-thunk'
 import createLogger from 'redux-logger'
-import { reducer } from '../redux/todoRedux'
+import Storage from 'react-native-storage'
 
-const middleware = [ thunk ]
+import { reducer } from '../todoRedux'
+
+const logger = createLogger({
+  predicate: (getState, action) => __DEV__ && !!window.navigator.userAgent,
+  collapsed: true,
+  duration: true,
+})
+
+const middleware = [ thunk, logger ]
 
 if (process.env.NODE_ENV === 'development') {
   middleware.push(createLogger())
-  require('../config/ReactotronConfig')
+  require('../../config/ReactotronConfig')
 }
 
 export default (initialState) => {

@@ -8,7 +8,7 @@ import { actionCreators } from '../redux/todoRedux'
 // import components
 import Title from '../components/Title'
 import Footer from '../components/Footer'
-import Input from '../components/Input'
+// import Input from '../components/Input'
 import List from '../components/List'
 
 const styles = StyleSheet.create({
@@ -54,19 +54,19 @@ class App extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Title> Todo List </Title>
-        <Input
+        <Title />
+        {/* <Input
           placeholder={'Enter a todo!'}
           onSubmit={this.addItem.bind(this)}
-        />
-        <View style={styles.divider} />
+        /> */}
+        {/* <View style={styles.divider} /> */}
         <List
           items={this.props.items}
           onRemove={this.onRemove.bind(this)}
           onCompleted={this.onCompleted.bind(this)}
         />
         <View style={styles.divider} />
-        <Footer onRemoveCompleted={this.onRemoveCompleted.bind(this)}/>
+        {/* <Footer onRemoveCompleted={this.onRemoveCompleted.bind(this)}/> */}
       </View>
     )
   }
