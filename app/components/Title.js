@@ -9,7 +9,10 @@ export default class Title extends Component {
     super(props)
   }
 
-  handleAdd = () => {}
+  handleAdd = () => {
+    const { navigator } = this.props
+    navigator.push({ name: 'EditView' })
+  }
 
   render() {
     return (
@@ -23,7 +26,6 @@ export default class Title extends Component {
               Todo List
             </Text>
             <TouchableHighlight
-              activeOpacity='0.6'
               underlayColor='transparent'
               style={styles.add}
               onPress={this.handleAdd}
@@ -61,8 +63,8 @@ const styles = StyleSheet.create({
   },
   add: {
     position: 'absolute',
-    right: 15,
-    bottom: 15,
+    right: 20,
+    bottom: 20,
   },
   icon: {
     width: 20,

@@ -10,6 +10,7 @@ import {
 } from 'react-native'
 
 import Tab from '../components/Tab'
+import HomeView from './HomeView'
 import Actions from '../redux/actions'
 
 class TabView extends Component {
@@ -22,7 +23,7 @@ class TabView extends Component {
 
     switch(index) {
       case 0:
-        return <Text> Home </Text>
+        return <HomeView navigator={navigator} />
       case 1:
         return <Text> Completed </Text>
       default:
