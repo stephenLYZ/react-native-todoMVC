@@ -5,7 +5,7 @@ import thunk from 'redux-thunk'
 import createLogger from 'redux-logger'
 import Storage from 'react-native-storage'
 
-import { reducer } from '../todoRedux'
+import { reducer } from '../reducers/navigator'
 
 const logger = createLogger({
   predicate: (getState, action) => __DEV__ && !!window.navigator.userAgent,

@@ -1,6 +1,4 @@
-const types = {
-  SWITCH_TAB: 'SWITCH_TAB'
-}
+import * as types from '../../constants/ActionsType'
 
 export const switchTab = (index) => {
   return {

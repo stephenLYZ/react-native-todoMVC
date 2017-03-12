@@ -1,10 +1,4 @@
-const types = {
-  ADD_ITEM: 'ADD_ITEM',
-  EDIT_ITEM: 'EDIT_ITEM',
-  ON_REMOVE: 'ON_REMOVE',
-  ON_COMPLEDTED: 'ON_COMPLEDTED',
-  ON_REMOVE_COMPLETED: 'ON_REMOVE_COMPLETED'
-}
+import * as types from '../../constants/ActionsType'
 
 export const addItem = (item) => {
   return {
