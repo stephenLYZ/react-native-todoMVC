@@ -6,7 +6,7 @@ import App from './containers/App'
 
 const store = configureStore()
 
-export default class extends Component {
+export default class Root extends Component {
   render() {
     return (
       <Provider store={store}>

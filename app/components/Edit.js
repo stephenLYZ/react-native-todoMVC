@@ -7,7 +7,8 @@ export default class Edit extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      label: ''
+      label: '',
+      color: ''
     }
   }
 
@@ -19,7 +20,8 @@ export default class Edit extends Component {
 
   onSubmitEditing = () => {
     const { handleSubmit } = this.props
-    handleSubmit()
+    const { label, color } = this.state
+    handleSubmit(label, color)
   }
 
   onCloseEditing = () => {
@@ -27,9 +29,6 @@ export default class Edit extends Component {
     handleClose()
   }
 
-  onColorChange = () => {
-
-  }
   renderInput = () => {
     const { label } = this.state
     return (
@@ -50,8 +49,8 @@ export default class Edit extends Component {
           return (
             <TouchableHighlight
               key={i}
-              style={{ marginTop: 20, borderColor: '#888', height: 80 }}
-              onPress={this.onColorChange}
+              style={{ marginTop: 20, borderColor: '#888', height: 86, borderWidth: this.state.color === color ? 3 : 0 }}
+              onPress={() => { this.setState({ color: color}) }}
             >
               <View style={{ width: 80, height: 80, backgroundColor: color }} />
             </TouchableHighlight>

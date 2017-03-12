@@ -6,20 +6,20 @@ import { StyleSheet, View } from 'react-native'
 
 // import components
 import Title from '../components/Title'
+import List from '../components/List'
 
 import Actions from '../redux/actions'
 
 class HomeView extends Component {
   constructor(props) {
     super(props)
-    this.state = {
-      visible: true
-    }
   }
+
   render() {
     return (
       <View style={styles.container}>
         <Title {...this.props} />
+        <List {...this.props} />
       </View>
     )
   }
@@ -34,7 +34,7 @@ const styles = StyleSheet.create({
 
 const mapStateToProps = (state) => {
   return {
-    items: state.items
+    items: state.todos.items
   }
 }
 

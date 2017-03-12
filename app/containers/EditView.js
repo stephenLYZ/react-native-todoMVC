@@ -18,7 +18,11 @@ class EditView extends Component {
     this.props.navigator.pop()
   }
 
-  handleSubmit = () => {}
+  handleSubmit = (item, color) => {
+    const { actions } = this.props
+    actions.addItem(item, color)
+    this.handleClose()
+  }
 
   render() {
     return (
@@ -39,7 +43,9 @@ const styles = StyleSheet.create({
 })
 
 const mapStateToProps = (state) => {
-  return {}
+  return {
+    
+  }
 }
 
 const mapDispatchToProps = (dispatch) => {

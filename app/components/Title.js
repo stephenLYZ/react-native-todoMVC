@@ -16,7 +16,6 @@ export default class Title extends Component {
 
   render() {
     return (
-      <View style={styles.container}>
           <View style={styles.background}>
             <Image
               style={styles.image}
@@ -33,24 +32,20 @@ export default class Title extends Component {
               <Image source={require('../assets/add.png')} style={styles.icon}/>
             </TouchableHighlight>
           </View>
-      </View>
     )
   }
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
   background: {
     height: 200,
     width: windowWidth,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#eee',
     shadowColor: 'black',
     shadowOffset: { width: 0, height: 4},
     shadowOpacity: 0.3,
+    zIndex: 1,
   },
   image: {
     width: 100,
@@ -58,7 +53,7 @@ const styles = StyleSheet.create({
   },
   title: {
     paddingTop: 5,
-    color: '#000',
+    color: '#693504',
     fontSize: 25,
   },
   add: {

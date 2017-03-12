@@ -5,15 +5,11 @@ import thunk from 'redux-thunk'
 import createLogger from 'redux-logger'
 import Storage from 'react-native-storage'
 
-import { reducer } from '../reducers/navigator'
+// import reducer from '../reducers/navigatorReducer.js'
+import reducer from '../reducers/index'
 
-const logger = createLogger({
-  predicate: (getState, action) => __DEV__ && !!window.navigator.userAgent,
-  collapsed: true,
-  duration: true,
-})
 
-const middleware = [ thunk, logger ]
+const middleware = [ thunk ]
 
 if (process.env.NODE_ENV === 'development') {
   middleware.push(createLogger())

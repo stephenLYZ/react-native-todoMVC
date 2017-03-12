@@ -1,9 +1,10 @@
 import * as types from '../../constants/ActionsType'
 
-export const addItem = (item) => {
+export const addItem = (item, color) => {
   return {
     type: types.ADD_ITEM,
-    payload: item
+    payload: item,
+    color: color
   }
 }
 

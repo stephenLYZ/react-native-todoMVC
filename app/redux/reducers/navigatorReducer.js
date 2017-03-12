@@ -4,7 +4,7 @@ const initialState = {
   index: 0
 }
 
-export const reducer = (state = initialState, action) => {
+const navigatorReducer = (state = initialState, action) => {
   const { type, payload } = action
   const { index } = state
 
@@ -19,3 +19,5 @@ export const reducer = (state = initialState, action) => {
     }
   }
 }
+
+export default navigatorReducer

@@ -48,7 +48,7 @@ const styles = StyleSheet.create({
 
 const mapStateToProps = (state) => {
   return {
-    tab: state.index
+    tab: state.navigator.index
   }
 }
 
