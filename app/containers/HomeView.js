@@ -19,7 +19,7 @@ class HomeView extends Component {
     return (
       <View style={styles.container}>
         <Title {...this.props} />
-        <List {...this.props} />
+        <List  {...this.props} />
       </View>
     )
   }

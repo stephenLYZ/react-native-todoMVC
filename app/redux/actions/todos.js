@@ -1,9 +1,9 @@
 import * as types from '../../constants/ActionsType'
 
-export const addItem = (item, color) => {
+export const addItem = (label, color) => {
   return {
     type: types.ADD_ITEM,
-    payload: item,
+    label: label,
     color: color
   }
 }
@@ -15,10 +15,10 @@ export const editItem = (item) => {
   }
 }
 
-export const onRemove = (index) => {
+export const onRemove = (id) => {
   return {
     type: types.ON_REMOVE,
-    payload: index
+    id: id
   }
 }
 

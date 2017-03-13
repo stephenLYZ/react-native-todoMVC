@@ -15,12 +15,18 @@ const todosReducer = (state = initialState, action) => {
         items: [
           {
             id: uuid.v4(),
-            label: action.payload,
+            label: action.label,
             color: action.color,
             completed: false
           },
           ...items
         ]
+      }
+
+    case types.ON_REMOVE:
+      return {
+        ...state,
+        items: items.filter( (item) => item.id !== action.id)
       }
     default:
       return state

@@ -18,9 +18,9 @@ class EditView extends Component {
     this.props.navigator.pop()
   }
 
-  handleSubmit = (item, color) => {
+  handleSubmit = (label, color) => {
     const { actions } = this.props
-    actions.addItem(item, color)
+    actions.addItem(label, color)
     this.handleClose()
   }
 
@@ -43,9 +43,7 @@ const styles = StyleSheet.create({
 })
 
 const mapStateToProps = (state) => {
-  return {
-    
-  }
+  return {}
 }
 
 const mapDispatchToProps = (dispatch) => {
