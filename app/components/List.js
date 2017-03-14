@@ -9,9 +9,9 @@ export default class List extends Component {
     super(props)
   }
 
-  onEdit = () => {
+  onEdit = (item) => {
     const { navigator } = this.props
-    navigator.push({ name: 'EditView' })
+    navigator.push({ name: 'EditView', item })
   }
 
   renderItem(item, i) {
@@ -29,7 +29,7 @@ export default class List extends Component {
         />
         <Text style={textStyle}>{ item.label }</Text>
         <View style={styles.rightSection}>
-          <TouchableOpacity style={styles.editWrapper} onPress={this.onEdit}>
+          <TouchableOpacity style={styles.editWrapper} onPress={ () => this.onEdit(item)}>
             <Image source={require('../assets/edit.png')} style={styles.image} />
           </TouchableOpacity>
           <TouchableOpacity style={styles.removeWrapper} onPress={ () => onRemove(item.id) }>

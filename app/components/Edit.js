@@ -6,12 +6,19 @@ import * as COLOR from '../constants/ColorConst'
 export default class Edit extends Component {
   constructor(props) {
     super(props)
-    this.state = {
-      label: '',
-      color: ''
-    }
+    const { item } = this.props
+    if(item) {
+      this.state = {
+        label: item.label,
+        color: item.color
+      }
+    } else {
+      this.state = {
+        label: '',
+        color: ''
+      }
+    }    
   }
-
   onChangeText = (text) => {
     this.setState({
       label: text

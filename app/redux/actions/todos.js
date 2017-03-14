@@ -8,10 +8,12 @@ export const addItem = (label, color) => {
   }
 }
 
-export const editItem = (item) => {
+export const editItem = (id, label, color) => {
   return {
     type: types.EDIT_ITEM,
-    payload: item
+    id: id,
+    label: label,
+    color: color
   }
 }
 

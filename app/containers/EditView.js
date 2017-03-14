@@ -13,14 +13,17 @@ class EditView extends Component {
   constructor(props) {
     super(props)
   }
-
   handleClose = () => {
     this.props.navigator.pop()
   }
 
   handleSubmit = (label, color) => {
-    const { actions } = this.props
-    actions.addItem(label, color)
+    const { actions, item } = this.props
+    if(item){
+      actions.editItem(item.id, label, color)
+    } else {
+      actions.addItem(label, color)
+    }
     this.handleClose()
   }
 

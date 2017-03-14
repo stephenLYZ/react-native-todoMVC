@@ -23,6 +23,17 @@ const todosReducer = (state = initialState, action) => {
         ]
       }
 
+    case types.EDIT_ITEM:
+      return {
+        ...state,
+        items: items.map((item) => {
+          if(item.id === action.id) {
+            return Object.assign({}, item, { label: action.label, color: action.color })
+          }
+          return item
+        })
+      }
+
     case types.ON_REMOVE:
       return {
         ...state,
@@ -34,12 +45,7 @@ const todosReducer = (state = initialState, action) => {
         ...state,
         items: items.map((item) => {
           if(item.id === action.id) {
-            return {
-              id: item.id,
-              label: item.label,
-              color: item.color,
-              completed: !item.completed
-            }
+            return Object.assign({}, item, { completed: !item.completed })
           }
           return item
         })
