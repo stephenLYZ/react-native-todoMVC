@@ -24,14 +24,15 @@ export default class List extends Component {
         <View style={{ width: 7, height: 45, backgroundColor: item.color, marginRight: 9 }} />
         <Checkbox
           isCheck={ item.completed }
-          onToggle={ () => onCompleted(i) }
+          onToggle={ () => onCompleted(item.id) }
+          color={ item.color }
         />
         <Text style={textStyle}>{ item.label }</Text>
         <View style={styles.rightSection}>
           <TouchableOpacity style={styles.editWrapper} onPress={this.onEdit}>
             <Image source={require('../assets/edit.png')} style={styles.image} />
           </TouchableOpacity>
-          <TouchableOpacity style={styles.removeWrapper} onPress={ () => {onRemove(item.id)} }>
+          <TouchableOpacity style={styles.removeWrapper} onPress={ () => onRemove(item.id) }>
             <Text style={styles.remove}> &times; </Text>
           </TouchableOpacity>
         </View>

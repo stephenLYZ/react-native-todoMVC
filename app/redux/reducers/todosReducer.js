@@ -28,6 +28,22 @@ const todosReducer = (state = initialState, action) => {
         ...state,
         items: items.filter( (item) => item.id !== action.id)
       }
+
+    case types.ON_COMPLEDTED:
+      return {
+        ...state,
+        items: items.map((item) => {
+          if(item.id === action.id) {
+            return {
+              id: item.id,
+              label: item.label,
+              color: item.color,
+              completed: !item.completed
+            }
+          }
+          return item
+        })
+      }
     default:
       return state
   }

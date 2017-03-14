@@ -22,10 +22,10 @@ export const onRemove = (id) => {
   }
 }
 
-export const onCompleted = (index) => {
+export const onCompleted = (id) => {
   return {
     type: types.ON_COMPLEDTED,
-    payload: index
+    id: id
   }
 }
 
