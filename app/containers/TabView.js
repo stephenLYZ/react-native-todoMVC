@@ -11,6 +11,7 @@ import {
 
 import Tab from '../components/Tab'
 import HomeView from './HomeView'
+import CompletedView from './CompletedView'
 import Actions from '../redux/actions'
 
 class TabView extends Component {
@@ -25,7 +26,7 @@ class TabView extends Component {
       case 0:
         return <HomeView navigator={navigator} />
       case 1:
-        return <Text> Completed </Text>
+        return <CompletedView navigator={navigator} />
       default:
         return null
     }

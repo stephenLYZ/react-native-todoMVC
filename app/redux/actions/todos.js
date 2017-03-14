@@ -31,9 +31,9 @@ export const onCompleted = (id) => {
   }
 }
 
-export const onRemoveCompleted = (item) => {
+export const onRemoveCompleted = (items) => {
   return {
     type: types.ON_REMOVE_COMPLETED,
-    payload: item
+    payload: items
   }
 }

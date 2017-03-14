@@ -50,6 +50,12 @@ const todosReducer = (state = initialState, action) => {
           return item
         })
       }
+
+    case types.ON_REMOVE_COMPLETED:
+      return {
+        ...state,
+        items: items.filter((item) => !item.completed)
+      }
     default:
       return state
   }
