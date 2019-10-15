@@ -1,9 +1,8 @@
 ## react-native-todoMVC
 
-<div align=center>![todo](https://cloud.githubusercontent.com/assets/11830681/23888184/79a1c742-08c1-11e7-986d-24e7de56be04.png)
-
+<img style="text-align: center; margin: 0 auto;" src="https://cloud.githubusercontent.com/assets/11830681/23888184/79a1c742-08c1-11e7-986d-24e7de56be04.png" alt="" />
 > A todoMVC app powered by React-Native & Redux
-</div>
+
 ## Demo
 
 ### Add
