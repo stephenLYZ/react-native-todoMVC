@@ -1,6 +1,6 @@
 ## react-native-todoMVC
 
-![todo](https://cloud.githubusercontent.com/assets/11830681/23888184/79a1c742-08c1-11e7-986d-24e7de56be04.png)
+<div align=center>![todo](https://cloud.githubusercontent.com/assets/11830681/23888184/79a1c742-08c1-11e7-986d-24e7de56be04.png)
 
 > A todoMVC app powered by React-Native & Redux
 
